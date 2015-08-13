@@ -2,14 +2,15 @@ class Chapter2 {
   def fib(n: Int): Int = {
 
     def loop(a: Int, b: Int, index: Int): Int = {
+
       if (index >= n) {
-        a + b
+        a
       } else {
         loop(b, a + b, index + 1)
       }
     }
 
-    loop(0, 1, 3)
+    loop(0, 1, 0)
 
   }
 
@@ -33,4 +34,12 @@ class Chapter2 {
     (a: A) => f(g(a))
   }
 
+}
+
+object Chapter2 {
+  def main(args: Array[String]) {
+    val chapter2 = new Chapter2
+    println(chapter2.fib(5))
+
+  }
 }
